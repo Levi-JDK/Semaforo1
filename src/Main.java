@@ -3,7 +3,6 @@ public class Main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             Semaforo semaforo1 = new Semaforo("rojo");
-            String continuar;
             String reset = "\u001B[0m";
             boolean hc = true;
             do {
@@ -15,13 +14,13 @@ public class Main {
                 int estSemaforo = sc.nextInt();
                 switch (estSemaforo){
                     case 1:
-                        if(semaforo1.getEstado()== "rojo"){
+                        if(semaforo1.getEstado().equals("rojo")){
                         semaforo1.setEstado("amarillo");
                         semaforo1.mostrarEstado();
                         semaforo1.setEstado("verde");}
                         break;
                     case 2:
-                        if(semaforo1.getEstado()=="verde"){
+                        if(semaforo1.getEstado().equals("verde")){
                         semaforo1.setEstado("amarillo");
                         semaforo1.mostrarEstado();
 
